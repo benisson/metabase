@@ -9,7 +9,7 @@ services:
         fromDatabase:
           name: config_capacity
           property: connectionString
-databases:
-  - name: config_capacity
-    databaseName: capacity-db
-    ipAllowList: [] # only allow internal connections
+#databases:
+#  - name: config_capacity
+#    databaseName: capacity-db
+#    ipAllowList: [] # only allow internal connections
