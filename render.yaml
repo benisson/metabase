@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: metabase
+    env: docker
+    repo: https://github.com/benisson/metabase.git 
+    plan: free 
+    autoDeploy: true
+    envVars:
+      - key: MB_DB_CONNECTION_URI
+        fromDatabase:
+          name: config_capacity
+          property: connectionString
+databases:
+  - name: config_capacity
+    databaseName: capacity-db
+    ipAllowList: [] # only allow internal connections
